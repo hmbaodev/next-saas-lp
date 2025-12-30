@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import clsx from "clsx";
+
+import "./globals.css";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -20,6 +22,7 @@ export default function RootLayout({
       <body className={clsx(dmSans.className, "antialiased bg-[#EAEEFE]")}>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-ZW733V3DXN" />
     </html>
   );
 }
